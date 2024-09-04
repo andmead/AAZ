@@ -1,0 +1,83 @@
+@font-face {
+    font-family: morpheus;
+    src: url(MORPHEUS.TTF);
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: fixed;
+}
+
+#links img{
+    width: 26px;
+    height: 26px;
+}
+
+#title-card {
+    text-align: center;
+}
+
+#title-card h1 {
+    font-family: morpheus, sans-serif;
+    
+}
+
+#title-card h2 {
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif
+
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider img {
+    width: 1280px;
+    height: 720px; 
+    display: none;
+    object-fit: cover; 
+    
+}
+
+img.displaySlide {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.534);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+@keyframes fade {
+    from {opacity: .5;}
+    to {opacity: 1;}
+}
